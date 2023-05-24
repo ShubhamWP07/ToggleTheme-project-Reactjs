@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState } from "react";
 import "./App.css";
 
-// Step 1: Create a new context
+// Creating a new context
 const ThemeContext = createContext();
 
-// Step 2: Create a provider component
+// Creating a provider component
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
 
@@ -19,10 +19,10 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-// Step 3: Create a consumer hook
+//Creating a consumer hook
 const useTheme = () => useContext(ThemeContext);
 
-// Step 4: Create components that consume the theme
+// Creating components that consume the theme
 const Dashboard = () => {
   const { theme, toggleTheme } = useTheme();
 
